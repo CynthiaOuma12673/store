@@ -35,6 +35,8 @@ INSTALLED_APPS = [
     'product',
     'crispy_forms',
     'bootstrap4',
+    'tinymce',
+    'social_django',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -70,6 +72,17 @@ TEMPLATES = [
         },
     },
 ]
+
+TINYMCE_DEFAULT_CONFIG = {
+    'height': 300,
+    'width': 800,
+    'cleanup_on_startup': True,
+    'custom_undo_redo_levels': 20,
+    'selector': 'textarea',
+    'theme': 'modern',
+    'plugins': 'advlist autolink lists link image charmap print preview anchor',
+    'toolbar': 'undo redo | styleselect | bold italic | link image',
+}
 
 WSGI_APPLICATION = 'store.wsgi.application'
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
